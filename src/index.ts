@@ -1,16 +1,12 @@
 /*! eslint-config-standard. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
-
-import { type Linter } from 'eslint'
-
-// @ts-expect-error missing type
 import pluginN from 'eslint-plugin-n'
-// @ts-expect-error missing type
+
 import * as pluginImport from 'eslint-plugin-import'
-// @ts-expect-error missing type
+
 import pluginPromise from 'eslint-plugin-promise'
 import globals from 'globals'
 
-const config: Linter.FlatConfig = {
+const config = {
   languageOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',
@@ -22,11 +18,11 @@ const config: Linter.FlatConfig = {
     globals: {
       ...globals.es2021,
       ...globals.node,
-      // @ts-expect-error @types/eslint seems to be incomplete
+
       document: 'readonly',
-      // @ts-expect-error @types/eslint seems to be incomplete
+
       navigator: 'readonly',
-      // @ts-expect-error @types/eslint seems to be incomplete
+
       window: 'readonly'
     }
   },

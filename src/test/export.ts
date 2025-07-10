@@ -1,11 +1,11 @@
 import actual from '..'
 import test from 'ava'
 
-// @ts-expect-error missing type
+
 import pluginN from 'eslint-plugin-n'
-// @ts-expect-error missing type
+
 import * as pluginImport from 'eslint-plugin-import'
-// @ts-expect-error missing type
+
 import pluginPromise from 'eslint-plugin-promise'
 import globals from 'globals'
 

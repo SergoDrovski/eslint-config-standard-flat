@@ -1,12 +1,27 @@
 {
-  "extends": "tsconfigs/nodejs-module",
   "compilerOptions": {
-    "outDir": "lib"
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true
   },
   "include": [
     ".eslintrc.js",
     "commitlint.config.js",
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib"
   ]
 }
 
